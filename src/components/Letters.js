@@ -3,15 +3,28 @@ import Letter from "./Letter";
 
 class Letters extends Component {
 
+    displayLetters(letterList, lettersStatus) {
+        return letterList.map(l => {
+            if (lettersStatus[l]) {
+                return <Letter letter={l} letterClass="letterClicked" />
+            } else {
+                return <Letter letter={l} letterClass="letterNotClicked" />
+            }
+        })
+    }
+
     render() {
-        let letters = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+        let lettersStatus = this.props.lettersStatus
+        let letterList = Object.keys(lettersStatus)
 
         return (
             <div>
-            {letters.map( l => <Letter letter={l}/>)}
+                <br></br>
+                <div>--Available Letters--</div>
+                {this.displayLetters(letterList, lettersStatus)}
             </div>
         )
-        
+
     }
 
 }

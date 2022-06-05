@@ -1,11 +1,18 @@
 import { Component } from "react";
 
-class Score extends Component{
+class Score extends Component {
 
-    render(){
+    render() {
+        let score = this.props.score
 
-        return(100)
-        
+        return (
+            <div>
+                <br></br>
+                <div>--Score--</div>
+                <div>{score}</div>
+            </div>
+        )
+
     }
 
 }

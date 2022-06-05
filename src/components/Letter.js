@@ -4,9 +4,10 @@ class Letter extends Component {
 
     render() {
         let letter = this.props.letter
+        let letterClass = this.props.letterClass
 
         return (
-            <span> {letter} </span>
+            <span className={letterClass}>    {letter}    </span>
         )
 
     }
