@@ -41,3 +41,18 @@
   color: #61dafb;
   text-decoration:line-through;
 }
+
+.scoreGreen{
+  font-weight: bold;
+  color: green;
+}
+
+.scoreYellow{
+  font-weight: bold;
+  color: rgb(237, 237, 23);
+}
+
+.scoreRed{
+  font-weight: bold;
+  color: red;
+}
